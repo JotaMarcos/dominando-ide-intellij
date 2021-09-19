@@ -3,6 +3,8 @@ package br.com.dio;
 
 import br.com.dio.model.Gato;
 
+import java.util.Objects;
+
 public class PrimeiroPrograma {
     public static void main(String[] args) {
 
@@ -13,6 +15,20 @@ public class PrimeiroPrograma {
         gato.setIdade(3);
 
         System.out.println(gato);
+
+        Livro livro1 = new Livro();
+        livro1.setNome("O problema dos 3 corpos");
+        livro1.setNumPaginas(300);
+
+        Livro livro2 = new Livro();
+
+        livro2.setNome("Os trabalhadores do mar");
+        livro2.setNumPaginas(1580);
+
+        System.out.println(livro1);
+        System.out.println(livro2);
+
+
 
        /* int a = 5;
         int b = 3;
@@ -27,4 +43,52 @@ public class PrimeiroPrograma {
 
 
     }
+
 }
+
+class Livro{
+    private String nome;
+    private Integer numPaginas;
+
+    //Construtor
+    public Livro(String nome, Integer numPaginas) {
+        this.nome = nome;
+        this.numPaginas = numPaginas;
+    }
+
+    public Livro(String nome) {}
+
+    public Livro() {
+
+    }
+
+    //Getters e Setters
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getNumPaginas() {
+        return numPaginas;
+    }
+
+    public void setNumPaginas(Integer numPaginas) {
+        this.numPaginas = numPaginas;
+    }
+
+    //toString
+
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "Nome do Livro='" + nome + '\'' +
+                ", Número de Páginas= " + numPaginas + " páginas." +
+                '}';
+    }
+}
+
+
+

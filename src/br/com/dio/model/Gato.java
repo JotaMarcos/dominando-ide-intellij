@@ -59,9 +59,9 @@ public class Gato {
     @Override
     public String toString() {
         return "Gato{" +
-                "nome='" + nome + '\'' +
-                ", cor='" + cor + '\'' +
-                ", idade=" + idade +
+                "Nome do Gato='" + nome + '\'' +
+                ", Cor do Gato='" + cor + '\'' +
+                ", Idade do Gato= " + idade + " anos." +
                 '}';
     }
 }
